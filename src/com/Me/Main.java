@@ -18,26 +18,36 @@ public class Main {
         hashMap.put("penguin", 5);
         hashMap.put("grizzly bear", 0);
 
+        String key = null;
+        Integer value = null;
+
         for (Map.Entry<String, Integer> entry : hashMap.entrySet()) {
-            String key = entry.getKey();
-            Integer value = entry.getValue();
+            key = entry.getKey();
+            value = entry.getValue();
 
             System.out.println(key + " -----------  " + String.valueOf(value));
 
-            /*grizzly bear -----------  0
-            bobcat -----------  7
-            goat -----------  3
-            penguin -----------  5*/
+        }
 
-            hashMap.remove("bobcat");
-            System.out.println("-------------------------------------------------");
-            System.out.println("after removal of 'bobcat' ");
-            System.out.println(key + " -----------  " + hashMap);
+        hashMap.remove("bobcat", 7);
+
+        System.out.println("-------------------------------------------------");
+        System.out.println("after removal of 'bobcat' ");
+
+        for (Map.Entry<String, Integer> entry : hashMap.entrySet()) {
+            key = entry.getKey();
+            value = entry.getValue();
+
+            System.out.println(key + " -----------  " + String.valueOf(value));
 
 
         }
 
     }
 }
+
+
+
+
 
 
